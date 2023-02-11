@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/11 16:06:17 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/11 16:51:05 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	create_new_element(char *strs, t_element **stack_a)
 	tmp = ft_atoi(strs);
 	// printf("\ntmp = : %d\n", tmp);
 	// printf("\nstrs[0] = : %c\n", strs[0]);
-	if(tmp == 0)
+	if(tmp == -1 && strs[0] != '-' || tmp == 0)
 		exit_error();
 	*stack_a = new_element(tmp, *stack_a);
 }

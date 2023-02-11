@@ -6,55 +6,37 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/11 15:49:49 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/11 16:50:18 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	space(const char *str, int *i)
-{
-	while (str[*i] == ' ' || str[*i] == '\t' || str[*i] == '\v'
-		|| str[*i] == '\r' || str[*i] == '\f' || str[*i] == '\n')
-		(*i)++;
-}
-
-static void	sign_in(char const *str, int *i, int *sign)
-{
-	if (str[*i] == '-')
-	{
-		*sign *= -1;
-		(*i)++;
-	}
-	else if (str[*i] == '+')
-		(*i)++;
-}
-
 int	ft_atoi(const char *str)
 {
-	int			i;
-	int			sign;
-	long long	result;
-	long long	previous_result;
+	unsigned int	i;
+	unsigned int	res;
+	int				neg;
 
-	sign = 1;
-	result = 0;
 	i = 0;
-	space(str, &i);
-	sign_in(str, &i, &sign);
-	while (ft_isdigit(str[i]) && str[i])
+	res = 0;
+	neg = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		previous_result = result;
-		result = previous_result * 10;
-		if (result / 10 != previous_result)
-		{
-			if (sign == -1)
-				return (0);
-			else
-				return (-1);
-		}
-		result += (str[i] - 48);
+		if (str[i] == '-')
+			neg = -neg;
 		i++;
 	}
-	return (sign * result);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + str[i] - '0';
+		i++;
+	}
+	if (neg < 0 && res >= 2147483648)
+		return (0);
+	else if (res >= 2147483648)
+		return (-1);
+	return (res * neg);
 }
