@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/10 20:13:13 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/11 12:37:33 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,5 +117,4 @@ void parsing (t_element **stack_a, char **argv, int argc)
 		index--;
 	}
 	check_data(*stack_a);
-	printf("\ncheck data ahmadi : %d\n", **stack_a);
 }
