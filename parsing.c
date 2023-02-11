@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/11 16:51:05 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/11 17:59:05 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,21 @@ t_element	*new_element(int tmp, t_element *stack_a)
 void	create_new_element(char *strs, t_element **stack_a)
 {
 	int	tmp;
+	int i;
 
+	i = 0;
 	if(!strs || !strs[0])
 		exit_error();
+	while(strs[i])
+	{
+		if(!ft_isdigit(strs[i]))
+			exit_error();
+		i++;
+	}
 	tmp = ft_atoi(strs);
 	// printf("\ntmp = : %d\n", tmp);
 	// printf("\nstrs[0] = : %c\n", strs[0]);
-	if(tmp == -1 && strs[0] != '-' || tmp == 0)
+	if(tmp == -1 && strs[0] != '-')
 		exit_error();
 	*stack_a = new_element(tmp, *stack_a);
 }
@@ -103,6 +111,8 @@ void parsing (t_element **stack_a, char **argv, int argc)
 			strs = ft_split(argv[index], ' ');
 			//printf("\containe dyal dak strs : %s\n", strs[1]);
 			i = my_strlen(strs) - 1;
+			if(i == -1)
+				exit_error();
 			//printf("\nlen dyal dak l i : %d\n", i);
 			while(i >= 0)
 			{
