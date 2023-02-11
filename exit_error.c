@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   exit_error.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/11 15:38:29 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/02/11 15:38:02 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/02/11 16:07:49 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
-# include <fcntl.h>
-# include "./libft/libft.h"
-
-typedef struct s_element {
-	int	value;
-	struct	s_element *next;
-}	t_element;
-
-//header parsing
-void	parsing (t_element **a, char **argv, int argc);
-void	exit_error(void);
-
-#endif
+void	exit_error(void)
+{
+	ft_putstr_fd("Error\n", 2);
+	exit(1);
+}
