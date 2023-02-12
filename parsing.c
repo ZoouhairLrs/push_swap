@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/11 18:33:48 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/12 02:05:08 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,8 @@ void	create_new_element(char *strs, t_element **stack_a)
 	tmp = ft_atoi(strs);
 	printf("\ntmp = : %d\n", tmp);
 	// printf("\nstrs[0] = : %c\n", strs[0]);
-	// if(tmp == -1 && strs[0] != '-')
-	// 	exit_error();
+	if(tmp == -1)
+		exit_error();
 	*stack_a = new_element(tmp, *stack_a);
 }
 
@@ -113,7 +113,7 @@ void parsing (t_element **stack_a, char **argv, int argc)
 			i = my_strlen(strs) - 1;
 			if(i == -1)
 				exit_error();
-			//printf("\nlen dyal dak l i : %d\n", i);
+			// printf("\nlen dyal dak l i : %d\n", i);
 			while(i >= 0)
 			{
 				create_new_element(strs[i], stack_a);
