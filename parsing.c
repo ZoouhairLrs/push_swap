@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/12 02:05:08 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/12 19:27:42 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,19 +54,26 @@ void	create_new_element(char *strs, t_element **stack_a)
 	int	tmp;
 	int i;
 
-	i = 1;
+	i = 0;
 	if(!strs || !strs[0])
 		exit_error();
 	while(strs[i])
 	{
-		if(!ft_isdigit(strs[i]))
-			exit_error();
+		if ((strs[i] == '+' || strs[i] == '-') && i == 0)
+		{
+			i++;
+			if(!ft_isdigit(strs[i]))
+			{
+				printf("\nhahowa dkhl l boucle\n");
+				exit_error();
+			}
+		}
 		i++;
 	}
+	printf("\nstrs = : %s\n", strs);
 	tmp = ft_atoi(strs);
 	printf("\ntmp = : %d\n", tmp);
-	// printf("\nstrs[0] = : %c\n", strs[0]);
-	if(tmp == -1)
+	if(tmp == -1 && strs[0] != '-')
 		exit_error();
 	*stack_a = new_element(tmp, *stack_a);
 }
