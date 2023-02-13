@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/13 16:29:05 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:33:42 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,7 @@ void	create_new_element(char *strs, t_element **stack_a)
 		if ((strs[i] == '+' || strs[i] == '-') && i == 0)
 			i++;
 		if(!ft_isdigit(strs[i]))
-		{
-			printf("\nhahowa dkhl l boucle\n");
 			exit_error();
-		}
 		i++;
 	}
 	printf("\nstrs = : %s\n", strs);
