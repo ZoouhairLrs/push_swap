@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/13 17:26:51 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:40:11 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ long long	ft_atoi(const char *str)
 	}
 	if (neg < 0 && res > 2147483648)
 		return (-1);
-	else if (res >= 2147483648)
+	else if (res >= 2147483648 && neg > 0)
 		return (-1);
 	return (res * neg);
 }
