@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/13 17:21:09 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/14 15:34:57 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,14 +119,14 @@ void parsing (t_element **stack_a, char **argv, int argc)
 			while(i >= 0)
 			{
 				create_new_element(strs[i], stack_a);
-				printf("\nhada howa stack_a : %d\n", **stack_a);
+				// printf("\nhada howa stack_a : %d\n", **stack_a);
 				i--;
 			}
 		}
 		else
 		{
 			create_new_element(argv[index], stack_a);
-			printf("\nhada howa stack_a : %d\n", **stack_a);
+			// printf("\nhada howa stack_a : %d\n", **stack_a);
 		}
 		index--;
 	}
