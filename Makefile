@@ -6,13 +6,14 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:42:44 by zlaarous          #+#    #+#              #
-#    Updated: 2023/02/14 15:48:21 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/02/15 13:26:17 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		= 	main.c \
 					parsing.c \
 					exit_error.c \
+					utils.c \
 					./libft/ft_memset.c \
 			  		./libft/ft_bzero.c \
 			  		./libft/ft_memcpy.c \

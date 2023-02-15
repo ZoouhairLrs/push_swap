@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/11 15:38:29 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/15 13:22:53 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ typedef struct s_element {
 //header parsing
 void	parsing (t_element **a, char **argv, int argc);
 void	exit_error(void);
+void	print_stacks(t_element *stack_a, t_element *stack_b);
 
 #endif
