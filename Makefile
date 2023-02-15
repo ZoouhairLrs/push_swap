@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:42:44 by zlaarous          #+#    #+#              #
-#    Updated: 2023/02/15 14:10:54 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/02/15 14:13:20 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCS		= 	main.c \
 			  		./libft/ft_strnstr.c \
 			  		./libft/ft_strrchr.c \
 			  		./libft/ft_strncmp.c \
-			  		./libft/ft_atoi.c \
+			  		./libft/ft_atol.c \
 			  		./libft/ft_isalpha.c \
 			  		./libft/ft_isdigit.c \
 			  		./libft/ft_isalnum.c \

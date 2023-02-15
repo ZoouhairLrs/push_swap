@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/15 13:27:47 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/15 14:14:14 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	create_new_element(char *strs, t_element **stack_a)
 			exit_error();
 		i++;
 	}
-	tmp = ft_atoi(strs);
+	tmp = ft_atol(strs);
 	if(tmp == -1)
 		exit_error();
 	*stack_a = new_element(tmp, *stack_a);
