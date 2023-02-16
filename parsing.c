@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/14 15:34:57 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/15 14:14:14 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,7 @@ void	create_new_element(char *strs, t_element **stack_a)
 			exit_error();
 		i++;
 	}
-	printf("\nstrs = : %s\n", strs);
-	tmp = ft_atoi(strs);
-	printf("\ntmp = : %ld\n", tmp);
+	tmp = ft_atol(strs);
 	if(tmp == -1)
 		exit_error();
 	*stack_a = new_element(tmp, *stack_a);
@@ -111,23 +109,17 @@ void parsing (t_element **stack_a, char **argv, int argc)
 		if(check_space(argv[index]))
 		{
 			strs = ft_split(argv[index], ' ');
-			//printf("\containe dyal dak strs : %s\n", strs[1]);
 			i = my_strlen(strs) - 1;
 			if(i == -1)
 				exit_error();
-			// printf("\nlen dyal dak l i : %d\n", i);
 			while(i >= 0)
 			{
 				create_new_element(strs[i], stack_a);
-				// printf("\nhada howa stack_a : %d\n", **stack_a);
 				i--;
 			}
 		}
 		else
-		{
 			create_new_element(argv[index], stack_a);
-			// printf("\nhada howa stack_a : %d\n", **stack_a);
-		}
 		index--;
 	}
 	check_data(*stack_a);
