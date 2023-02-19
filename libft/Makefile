@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 23:55:14 by zlaarous          #+#    #+#              #
-#    Updated: 2022/11/06 17:23:21 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/02/19 18:25:54 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCS		= ft_memset.c \
 			  ft_strrchr.c \
 			  ft_strnstr.c \
 			  ft_strncmp.c \
-			  ft_atoi.c \
+			  ft_atol.c \
 			  ft_isalpha.c \
 			  ft_isdigit.c \
 			  ft_isalnum.c \
