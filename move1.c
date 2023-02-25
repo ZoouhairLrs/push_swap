@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:29:08 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/25 18:36:10 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/25 19:21:02 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,23 @@ void	push(t_element **stack_a, t_element **stack_b)
 	*stack_a = element;
 }
 
+void	rotate(t_element **stack)
+{
+	t_element	*tmp;
+	int			first;
+
+	tmp = *stack;
+	first = tmp->value;
+	if (!tmp || !tmp->next)
+		return ;
+	while (tmp->next != NULL)
+	{
+		tmp->value = tmp->next->value;
+		tmp = tmp->next;
+	}
+	tmp->value = first;
+}
+
 void	sort(char *move, t_element **stack_a, t_element **stack_b)
 {
 	// (void)stack_a;
@@ -35,7 +52,16 @@ void	sort(char *move, t_element **stack_a, t_element **stack_b)
 	{
 		push(stack_a, stack_b);
 	}
-	else if(ft_strcmp(move, "pa")){
+	else if(ft_strcmp(move, "pa"))
+	{
 		push(stack_b, stack_a);
+	}
+	else if(ft_strcmp(move, "ra"))
+	{
+		rotate(stack_a);
+	}
+	else if(ft_strcmp(move, "rb"))
+	{
+		rotate(stack_b);
 	}
 }
