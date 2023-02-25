@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/15 16:00:51 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/02/25 18:02:41 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ typedef struct s_element {
 void	parsing (t_element **a, char **argv, int argc);
 void	exit_error(void);
 void	print_stacks(t_element *stack_a, t_element *stack_b);
-void	sort(char *move, t_element *stack_a, t_element *stack_b);
+void	sort(char *move, t_element **stack_a, t_element **stack_b);
 int	ft_strcmp(char *a, char *b);
+t_element	*new_element(int tmp, t_element *stack_a);
 
 #endif
