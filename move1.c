@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:29:08 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/26 15:54:56 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/27 09:21:32 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,29 +90,36 @@ void	sort(char *move, t_element **stack_a, t_element **stack_b)
 	if(ft_strcmp(move, "pb"))
 	{
 		push(stack_a, stack_b);
+		ft_putstr_fd("pb\n", 1);
 	}
 	else if(ft_strcmp(move, "pa"))
 	{
 		push(stack_b, stack_a);
+		ft_putstr_fd("pa\n", 1);
 	}
 	else if(ft_strcmp(move, "ra"))
 	{
 		rotate(stack_a);
+		ft_putstr_fd("ra\n", 1);
 	}
 	// else if(ft_strcmp(move, "rb"))
 	// {
 	// 	rotate(stack_b);
+	// ft_putstr_fd("rb", 1);
 	// }
 	else if(ft_strcmp(move, "rr"))
 	{
 		rotate_both(stack_a ,stack_b);
+		ft_putstr_fd("rr\n", 1);
 	}
 	else if(ft_strcmp(move, "sa"))
 	{
 		swap(stack_a);
+		ft_putstr_fd("sa\n", 1);
 	}
 	else if(ft_strcmp(move, "sb"))
 	{
 		swap(stack_b);
+		ft_putstr_fd("sb\n", 1);
 	}
 }

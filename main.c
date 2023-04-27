@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/26 15:57:20 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/04/27 09:20:49 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,8 @@ int main(int argc, char **argv)
 	printf("\n************\n\n");
 	sort("ra", &stack_a, &stack_b);
 	print_stacks(stack_a, stack_b);
+	
 	printf("\n************\n\n");
 	sort("sa", &stack_a, &stack_b);
 	print_stacks(stack_a, stack_b);
-
-	printf("pb");
 }
