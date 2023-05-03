@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/25 15:52:01 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/03 11:19:48 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,8 @@ int	check_space(char *argv)
 
 void parsing (t_element **stack_a, char **argv, int argc)
 {
-	int	index;
-	int	i;
+	int		len_strs;
+	int		index;
 	char	**strs;
 
 	index = argc - 1;
@@ -109,13 +109,13 @@ void parsing (t_element **stack_a, char **argv, int argc)
 		if(check_space(argv[index]))
 		{
 			strs = ft_split(argv[index], ' ');
-			i = my_strlen(strs) - 1;
-			if(i == -1)
+			len_strs = my_strlen(strs) - 1;
+			if(len_strs == -1)
 				exit_error();
-			while(i >= 0)
+			while(len_strs >= 0)
 			{
-				create_new_element(strs[i], stack_a);
-				i--;
+				create_new_element(strs[len_strs], stack_a);
+				len_strs--;
 			}
 		}
 		else
