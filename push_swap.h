@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/25 18:02:41 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:20:52 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ void	parsing (t_element **a, char **argv, int argc);
 void	exit_error(void);
 void	print_stacks(t_element *stack_a, t_element *stack_b);
 void	sort(char *move, t_element **stack_a, t_element **stack_b);
-int	ft_strcmp(char *a, char *b);
+int		ft_strcmp(char *a, char *b);
 t_element	*new_element(int tmp, t_element *stack_a);
+int		is_sorted(t_element **stack_a);
 
 #endif
