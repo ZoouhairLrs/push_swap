@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/15 14:13:42 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/04 20:48:23 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
 long long	ft_atol(const char *str)
 {
@@ -35,8 +35,8 @@ long long	ft_atol(const char *str)
 		i++;
 	}
 	if (neg < 0 && res > 2147483648)
-		return (-1);
+		exit_error();
 	else if (res >= 2147483648 && neg > 0)
-		return (-1);
+		exit_error();
 	return (res * neg);
 }
