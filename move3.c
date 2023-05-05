@@ -1,43 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move1.c                                            :+:      :+:    :+:   */
+/*   move3.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 13:11:41 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/05 13:14:27 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/05/05 13:17:04 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/05/05 13:18:52 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_element **stack)
+void	rotate(t_element **stack)
 {
-	int	t;
-	t_element *next_node;
+	t_element	*tmp;
+	int			first;
 
-	if (element_size(*stack) < 2)
+	tmp = *stack;
+	first = tmp->value;
+	if (!tmp || !tmp->next)
 		return ;
-	next_node = (*stack)->next;
-	t = (*stack)->value;
-	(*stack)->value = next_node->value;//(*stack)->next->value;
-	next_node->value = t;
-	// (*stack)->next->value = t;
+	while (tmp->next != NULL)
+	{
+		tmp->value = tmp->next->value;
+		tmp = tmp->next;
+	}
+	tmp->value = first;
 }
 
-void	do__sa(t_element **stack_a)
+void	do__ra(t_element **stack_a)
 {
-	swap(stack_a);
+	rotete(stack_a);
 }
 
-void	do__sa(t_element **stack_b)
+void	do__rb(t_element **stack_b)
 {
-	swap(stack_b);
+	rotete(stack_b);
 }
 
-void	do__ss(t_element **stack_a, t_element **stack_b)
+void	do__rr(t_element **stack_a, t_element **stack_b)
 {
-	swap(stack_a);
-	swap(stack_b);
+	rotate(stack_a);
+	rotate(stack_b);
 }

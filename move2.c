@@ -1,43 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move1.c                                            :+:      :+:    :+:   */
+/*   move2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 13:11:41 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/05 13:14:27 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/05/05 13:14:41 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/05/05 13:16:34 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_element **stack)
+void	push(t_element **stack_a, t_element **stack_b)
 {
-	int	t;
-	t_element *next_node;
+	t_element	*tmp;
+	t_element	*element;
 
-	if (element_size(*stack) < 2)
+	if (!*stack_a)
 		return ;
-	next_node = (*stack)->next;
-	t = (*stack)->value;
-	(*stack)->value = next_node->value;//(*stack)->next->value;
-	next_node->value = t;
-	// (*stack)->next->value = t;
+	element = (*stack_a)->next;
+	tmp = *stack_a;
+	tmp->next = *stack_b;
+	*stack_b = tmp;
+	*stack_a = element;
 }
 
-void	do__sa(t_element **stack_a)
+void	do__pa(t_element **stack_a, t_element **stack_b)
 {
-	swap(stack_a);
+	push(stack_a, stack_b);
 }
 
-void	do__sa(t_element **stack_b)
+void	do__pb(t_element **stack_a, t_element **stack_b)
 {
-	swap(stack_b);
-}
-
-void	do__ss(t_element **stack_a, t_element **stack_b)
-{
-	swap(stack_a);
-	swap(stack_b);
+	push(stack_b, stack_a);
 }
