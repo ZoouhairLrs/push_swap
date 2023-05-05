@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:42:44 by zlaarous          #+#    #+#              #
-#    Updated: 2023/02/15 16:01:02 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/05/05 14:20:34 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,11 @@ SRCS		= 	main.c \
 					parsing.c \
 					exit_error.c \
 					printf_stack.c \
+					sorting.c \
 					move1.c \
+					move2.c \
+					move3.c \
+					move4.c \
 					ft_strcmp.c \
 					./libft/ft_memset.c \
 			  		./libft/ft_bzero.c \

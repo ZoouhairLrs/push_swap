@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 13:14:41 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/05 13:16:34 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/05 14:15:30 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ void	push(t_element **stack_a, t_element **stack_b)
 void	do__pa(t_element **stack_a, t_element **stack_b)
 {
 	push(stack_a, stack_b);
+	ft_putstr_fd("pa\n", 1);
 }
 
 void	do__pb(t_element **stack_a, t_element **stack_b)
 {
 	push(stack_b, stack_a);
+	ft_putstr_fd("pb\n", 1);
 }
