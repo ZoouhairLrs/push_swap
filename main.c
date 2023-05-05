@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/05 16:23:00 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/05 22:12:59 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,15 @@ int main(int argc, char **argv)
 
 	stack_b = NULL;
 	stack_a = NULL;
-
 	if(argc == 1)
 		return (0);
 	parsing(&stack_a, argv, argc);
 	if (is_sorted(&stack_a))
+	{
+		//don't miss free stacks.
 		return (0);
+	}
 	print_stacks(stack_a, stack_b);
-	sort("rra", &stack_a, &stack_b);
+	sort(&stack_a, &stack_b);
 	print_stacks(stack_a, stack_b);
-	// printf("\n************\n\n");
-	// sort("ra", &stack_a, &stack_b);
-	// print_stacks(stack_a, stack_b);
-
-	// printf("\n************\n\n");
-	// sort("sa", &stack_a, &stack_b);
-	// print_stacks(stack_a, stack_b);
 }

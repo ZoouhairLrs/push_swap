@@ -1,42 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 15:29:08 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/05 22:13:41 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/05/05 21:58:15 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/05/05 22:03:59 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	element_size(t_element *stack)
+void	free_stack(t_element **stack)
 {
-	size_t	size;
+	t_element	*head;
+	t_element	*tmp;
 
-	size = 0;
-	while (stack)
+	head = *stack;
+	while (head)
 	{
-		stack = stack->next;
-		size++;
+		tmp = head;
+		head = head->next;
+		free(tmp);
 	}
-	return (size);
+	free(stack);
 }
 
-void	sort(t_element **stack_a, t_element **stack_b)
+int	lst_size(t_element *head)
 {
-	(void)stack_b;
-	// if len argc == 2 do__sa
-	if (lst_size(*stack_a) == 2)
+	size_t		i;
+	t_element	*tmp;
+
+	tmp = head;
+	i = 0;
+	while (tmp)
 	{
-		do__sa(stack_a);
+		tmp = tmp->next;
+		i++;
 	}
-	
-	//if argc == 3 
-
-	//if argc == 4
-
-	//if argc == 5
+	return (i);
 }
