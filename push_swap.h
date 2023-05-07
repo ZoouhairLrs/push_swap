@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/05 22:07:57 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/08 00:42:32 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,21 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <fcntl.h>
+# include <stdbool.h>
 # include "./libft/libft.h"
 
 typedef struct s_element {
 	int	value;
+	int index;
 	struct	s_element *next;
 }	t_element;
 
+typedef struct s_list {
+	int	*tab;
+} t_list;
+
 //header parsing
-void		parsing (t_element **a, char **argv, int argc);
+void		parsing(t_element **a, char **argv, int argc);
 void		exit_error(void);
 void		print_stacks(t_element *stack_a, t_element *stack_b);
 void		sort(t_element **stack_a, t_element **stack_b);
@@ -35,7 +41,16 @@ t_element	*new_element(int tmp, t_element *stack_a);
 int			is_sorted(t_element **stack_a);
 
 //header sorting
-size_t	element_size(t_element *lst);
+size_t		element_size(t_element *lst);
+int 	*sorting_stack_clone(t_element *stack_a);
+void    	create_index(t_element *stack_a);
+void	sort_three(t_element **stack_a);
+t_element	*find_min(t_element *stack_a);
+t_element	*find_max(t_element *stack_a);
+void    sort_forth(t_element **stack_a, t_element **stack_b);
+int	find_in_stack(t_element *stack_a, int number);
+void    sort_five(t_element **stack_a, t_element **stack_b);
+
 
 //header utils
 void	free_stack(t_element **stack);

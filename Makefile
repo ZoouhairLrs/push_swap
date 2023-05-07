@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:42:44 by zlaarous          #+#    #+#              #
-#    Updated: 2023/05/05 22:06:57 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/05/08 00:41:20 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,11 @@ SRCS		= 	main.c \
 					parsing.c \
 					exit_error.c \
 					printf_stack.c \
+					create_index.c \
+					three_sort.c \
+					forth_sort.c \
+					five_sort.c \
+					min_max.c \
 					sorting.c \
 					move1.c \
 					move2.c \

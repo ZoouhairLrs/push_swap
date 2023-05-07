@@ -1,47 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   min_max.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 15:29:08 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/08 00:44:02 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/05/08 00:04:56 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/05/08 00:11:38 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	element_size(t_element *stack)
+t_element	*find_min(t_element *stack_a)
 {
-	size_t	size;
+	t_element	*stack;
+	t_element	*min;
 
-	size = 0;
+	min = stack_a;
+	stack = stack_a;
 	while (stack)
 	{
+		if (stack->value < min->value)
+			min = stack;
 		stack = stack->next;
-		size++;
 	}
-	return (size);
+	return (min);
 }
 
-void	sort(t_element **stack_a, t_element **stack_b)
+t_element	*find_max(t_element *stack_a)
 {
-	(void)stack_b;
-	// if len argc == 2 do__sa
-	if (lst_size(*stack_a) == 2)
-		do__sa(stack_a);
-	
-	//if argc == 3
-	if (lst_size(*stack_a) == 3)
-		sort_three(stack_a);
+	t_element	*stack;
+	t_element	*max;
 
-	//if argc == 4
-	if (lst_size(*stack_a) == 4)
-		sort_forth(stack_a, stack_b);
-
-	//if argc == 5
-	if (lst_size(*stack_a) == 5)
-		sort_five(stack_a, stack_b);
-	
+	max = stack_a;
+	stack = stack_a;
+	while (stack)
+	{
+		if (stack->value > max->value)
+			max = stack;
+		stack = stack->next;
+	}
+	return (max);
 }
