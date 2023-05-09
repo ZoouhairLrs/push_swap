@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:42:44 by zlaarous          #+#    #+#              #
-#    Updated: 2023/05/08 00:41:20 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/05/09 00:32:12 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ OBJES = $(SRCS:.c=.o)
 
 NAME 		= push_swap
 CC 			= cc
-CFLAGS 		= -Wall -Wextra -Werror
+CFLAGS 		= -Wall -Wextra -Werror -fsanitize=address -g
 RM 			= rm -rf
 
 %.o			:	%.c push_swap.h

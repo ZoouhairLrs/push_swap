@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/08 00:42:32 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/09 02:05:48 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ typedef struct s_element {
 
 typedef struct s_list {
 	int	*tab;
+	t_element *stack_a;
+	t_element *stack_b;
 } t_list;
 
 //header parsing
@@ -42,7 +44,7 @@ int			is_sorted(t_element **stack_a);
 
 //header sorting
 size_t		element_size(t_element *lst);
-int 	*sorting_stack_clone(t_element *stack_a);
+void 	*sorting_stack_clone(t_element *stack_a, t_list *tab);
 void    	create_index(t_element *stack_a);
 void	sort_three(t_element **stack_a);
 t_element	*find_min(t_element *stack_a);

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:29:08 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/08 00:44:02 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/09 04:40:27 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,8 @@ void	sort(t_element **stack_a, t_element **stack_b)
 	//if argc == 5
 	if (lst_size(*stack_a) == 5)
 		sort_five(stack_a, stack_b);
+	//if argc > 5
+	// if (lst_size(stack_a) > 5)
+		// sort_big_algo(); 
 	
 }
