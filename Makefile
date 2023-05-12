@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:42:44 by zlaarous          #+#    #+#              #
-#    Updated: 2023/05/09 00:32:12 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/05/12 05:14:35 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRCS		= 	main.c \
 					three_sort.c \
 					forth_sort.c \
 					five_sort.c \
+					sort_big_algo.c \
 					min_max.c \
 					sorting.c \
 					move1.c \
@@ -25,6 +26,7 @@ SRCS		= 	main.c \
 					move3.c \
 					move4.c \
 					utils.c \
+					tools_big_algo.c \
 					ft_strcmp.c \
 					./libft/ft_memset.c \
 			  		./libft/ft_bzero.c \

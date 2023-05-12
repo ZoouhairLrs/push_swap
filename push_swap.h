@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/09 02:05:48 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/12 16:58:36 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,14 @@
 
 typedef struct s_element {
 	int	value;
+	int	pos;
 	int index;
 	struct	s_element *next;
 }	t_element;
 
 typedef struct s_list {
 	int	*tab;
+	int len_stack;
 	t_element *stack_a;
 	t_element *stack_b;
 } t_list;
@@ -78,5 +80,12 @@ void	do__rra(t_element **stack_a);
 void	do__rrb(t_element **stack_b);
 void	do__rrr(t_element **stack_a, t_element **stack_b);
 
+//big algo;
+void    push_to_b(t_element **stack_a, t_element **stack_b, int i);
+void    sort_big_algo(t_element **stack_a, t_element **stack_b);
+void    push_b_to_a(t_element **stack_a, t_element **stack_b);
+t_element   *big_node_of_stack(t_element **stack_b);
+int		pos_node(t_element **stack_b, t_element *big_node);
+void    push_to_a(t_element **stack_a, t_element **stack_b, t_element *big_node);
 
 #endif
