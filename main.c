@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 16:11:19 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/13 21:50:08 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,21 +40,12 @@ int main(int argc, char **argv)
 	if (is_sorted(&stack_a))
 	{
 		//don't miss free stacks.
+		// free(stack_a);
+		// free(stack_b);
 		return (0);
 	}
-	
 	sort(&stack_a, &stack_b);
-	write (1, "\n", 1);
 	print_stacks(stack_a, stack_b);
-	// print_stacks(NULL, stack_b);
-	// int i = 0;
-	// while (i < lst_size(stack_b))
-	// {
-	// 	printf("this is stack_b->value => %d\n", stack_b->value);
-	// 	printf("this is stack_b->index => %d\n", stack_b->index);
-	// 	stack_b = stack_b->next;
-	// }
-	// print_stacks(stack_a, stack_b);
-	// tab = sorting_stack_clone(stack_a);
-	// printf("%d\n", tab[2]);
+	// free(stack_a);
+	// free(stack_b);
 }

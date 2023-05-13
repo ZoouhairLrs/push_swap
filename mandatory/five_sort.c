@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 00:39:49 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 16:15:18 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/13 22:21:04 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ void    sort_five(t_element **stack_a, t_element **stack_b)
             do__rra(stack_a);
     }
     sort_forth(stack_a, stack_b);
-    do__pa(stack_b, stack_a);
+    do__pa(stack_a, stack_b);
 }
