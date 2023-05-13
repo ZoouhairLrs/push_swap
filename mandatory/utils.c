@@ -1,29 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 16:00:16 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/02/15 16:08:12 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/05/05 21:58:15 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/05/13 16:14:21 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
-int	ft_strcmp(char *a, char *b)
+void	free_stack(t_element **stack)
 {
-	int	i;
+	t_element	*head;
+	t_element	*tmp;
 
-	i = 0;
-	// if (ft_strlen(a) != ft_strlen(b))
-	// 	return (0);
-	while (a[i])
+	head = *stack;
+	while (head)
 	{
-		if (a[i] != b[i])
-			return (0);
+		tmp = head;
+		head = head->next;
+		free(tmp);
+	}
+	free(stack);
+}
+
+int	lst_size(t_element *head)
+{
+	size_t		i;
+	t_element	*tmp;
+
+	tmp = head;
+	i = 0;
+	while (tmp)
+	{
+		tmp = tmp->next;
 		i++;
 	}
-	return (1);
+	return (i);
 }

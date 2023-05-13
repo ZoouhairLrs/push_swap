@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 13:21:50 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/26 15:50:48 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/13 16:10:05 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./include/push_swap.h"
 
 void	print_stacks(t_element *stack_a, t_element *stack_b)
 {

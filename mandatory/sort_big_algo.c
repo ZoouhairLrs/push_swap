@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 16:49:26 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/12 22:28:55 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/13 16:14:08 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void    push_to_b(t_element **stack_a, t_element **stack_b, int i)
 {

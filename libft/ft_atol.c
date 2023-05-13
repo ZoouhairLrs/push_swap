@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/04 20:48:23 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/13 16:16:09 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../include/push_swap.h"
 
 long long	ft_atol(const char *str)
 {

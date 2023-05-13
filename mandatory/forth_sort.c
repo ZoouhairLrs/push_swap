@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 00:13:33 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/12 20:00:50 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/13 16:13:14 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	find_in_stack(t_element *stack_a, int number)
 {

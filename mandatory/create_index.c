@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 17:05:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/09 04:37:29 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/13 16:13:07 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void   *sorting_stack_clone(t_element *stack_a, t_list *list)
 {

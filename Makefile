@@ -6,28 +6,28 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:42:44 by zlaarous          #+#    #+#              #
-#    Updated: 2023/05/12 05:14:35 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/05/13 16:15:49 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		= 	main.c \
-					parsing.c \
-					exit_error.c \
-					printf_stack.c \
-					create_index.c \
-					three_sort.c \
-					forth_sort.c \
-					five_sort.c \
-					sort_big_algo.c \
-					min_max.c \
-					sorting.c \
-					move1.c \
-					move2.c \
-					move3.c \
-					move4.c \
-					utils.c \
-					tools_big_algo.c \
-					ft_strcmp.c \
+					./mandatory/parsing.c \
+					./mandatory/exit_error.c \
+					./printf_stack.c \
+					./mandatory/create_index.c \
+					./mandatory/three_sort.c \
+					./mandatory/forth_sort.c \
+					./mandatory/five_sort.c \
+					./mandatory/sort_big_algo.c \
+					./mandatory/min_max.c \
+					./mandatory/sorting.c \
+					./mandatory/move1.c \
+					./mandatory/move2.c \
+					./mandatory/move3.c \
+					./mandatory/move4.c \
+					./mandatory/utils.c \
+					./mandatory/tools_big_algo.c \
+					./mandatory/ft_strcmp.c \
 					./libft/ft_memset.c \
 			  		./libft/ft_bzero.c \
 			  		./libft/ft_memcpy.c \

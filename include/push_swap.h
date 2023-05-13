@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/12 16:58:36 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/13 16:10:56 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdbool.h>
-# include "./libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct s_element {
 	int	value;

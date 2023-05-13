@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit_error.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 15:38:02 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/04/26 14:24:06 by zlaarous         ###   ########.fr       */
+/*   Created: 2023/02/15 16:00:16 by zlaarous          #+#    #+#             */
+/*   Updated: 2023/05/13 16:13:17 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
-void	exit_error(void)
+int	ft_strcmp(char *a, char *b)
 {
-	ft_putstr_fd("Error\n", 2);
-	exit(1);
+	int	i;
+
+	i = 0;
+	// if (ft_strlen(a) != ft_strlen(b))
+	// 	return (0);
+	while (a[i])
+	{
+		if (a[i] != b[i])
+			return (0);
+		i++;
+	}
+	return (1);
 }
