@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:25:21 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 16:16:09 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/13 17:41:00 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 long long	ft_atol(const char *str)
 {
-	int	i;
+	int			i;
 	long long	res;
-	int				neg;
+	int			neg;
 
 	i = 0;
 	res = 0;
