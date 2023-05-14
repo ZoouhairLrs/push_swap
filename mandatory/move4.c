@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 13:21:19 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 16:14:05 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/14 21:31:48 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,16 @@
 
 void	reverse_rotate(t_element **stack)
 {
-	t_element	*last;
 	t_element	*tmp;
+	t_element	*tail;
+	t_element	*before_tail;
 
-	last = *stack;
+	tail = get_stack_bottom(*stack);
+	before_tail = get_stack_before_bottom(*stack);
 	tmp = *stack;
-	while (last->next != NULL)
-	{
-		tmp = last;
-		last = last->next;
-	}
-	last->next = *stack;
-	*stack = last;
-	tmp->next = NULL;
+	*stack = tail;
+	(*stack)->next = tmp;
+	before_tail->next = NULL;
 }
 
 void	do__rra(t_element **stack_a)

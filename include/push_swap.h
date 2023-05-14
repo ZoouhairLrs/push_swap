@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 17:59:56 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/14 21:32:43 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,9 @@ void    push_to_b(t_element **stack_a, t_element **stack_b, int i);
 void    sort_big_algo(t_element **stack_a, t_element **stack_b);
 void    push_b_to_a(t_element **stack_a, t_element **stack_b);
 t_element   *big_node_of_stack(t_element **stack_b);
-int		pos_node(t_element **stack_b, t_element *big_node);
+int		pos_node(t_element **stack_b, t_element *big_small_node);
 void    push_to_a(t_element **stack_a, t_element **stack_b, t_element *big_node);
+t_element	*get_stack_bottom(t_element *stack);
+t_element	*get_stack_before_bottom(t_element *stack);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 04:28:26 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 21:42:01 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/14 20:07:56 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_element   *big_node_of_stack(t_element **stack_b)
 	return (head2);
 }
 
-int pos_node(t_element **stack_b, t_element *big_node)
+int pos_node(t_element **stack_b, t_element *big_small_node)
 {
     t_element   *head;
     int         pos;
@@ -37,7 +37,7 @@ int pos_node(t_element **stack_b, t_element *big_node)
     head = *stack_b;
     while (1)
     {
-        if (big_node->index == head->index)
+        if (big_small_node->index == head->index)
             break;
         pos++;
         head = head->next;

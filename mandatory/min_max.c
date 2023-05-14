@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 00:04:56 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 16:13:47 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/14 21:20:33 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ t_element	*find_min(t_element *stack_a)
 
 	min = stack_a;
 	stack = stack_a;
-	while (stack)
+	while (stack != NULL)
 	{
-		if (stack->value < min->value)
+		if (min->index > stack->index)
 			min = stack;
 		stack = stack->next;
 	}
@@ -37,7 +37,7 @@ t_element	*find_max(t_element *stack_a)
 	stack = stack_a;
 	while (stack)
 	{
-		if (stack->value > max->value)
+		if (stack->index < max->index)
 			max = stack;
 		stack = stack->next;
 	}

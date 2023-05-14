@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 21:58:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 16:14:21 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/14 23:26:54 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,18 @@ int	lst_size(t_element *head)
 		i++;
 	}
 	return (i);
+}
+
+t_element	*get_stack_bottom(t_element *stack)
+{
+	while (stack && stack->next != NULL)
+		stack = stack->next;
+	return (stack);
+}
+
+t_element	*get_stack_before_bottom(t_element *stack)
+{
+	while (stack && stack->next && stack->next->next != NULL)
+		stack = stack->next;
+	return (stack);
 }

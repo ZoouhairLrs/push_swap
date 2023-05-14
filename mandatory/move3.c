@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 13:17:04 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 16:14:02 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/14 23:11:56 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,13 @@
 void	rotate(t_element **stack)
 {
 	t_element	*tmp;
-	int			first;
+	t_element	*tail;
 
 	tmp = *stack;
-	first = tmp->value;
-	if (!tmp || !tmp->next)
-		return ;
-	while (tmp->next != NULL)
-	{
-		tmp->value = tmp->next->value;
-		tmp = tmp->next;
-	}
-	tmp->value = first;
+	*stack = (*stack)->next;
+	tail = get_stack_bottom(*stack);
+	tmp->next = NULL;
+	tail->next = tmp;
 }
 
 void	do__ra(t_element **stack_a)

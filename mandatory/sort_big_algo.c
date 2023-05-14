@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 16:49:26 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 22:04:49 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/14 23:24:34 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void    push_to_b(t_element **stack_a, t_element **stack_b, int i)
         else if (head->index < i + 16)
         {
             do__pb(stack_a, stack_b);
-            do__rb(stack_b);
+            do__ra(stack_a);
             i++;
         }
         else
