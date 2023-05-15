@@ -6,13 +6,13 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 16:49:26 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/15 16:15:50 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/15 23:47:42 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void    push_to_b(t_element **stack_a, t_element **stack_b, int div)
+void    push_to_b(t_element **stack_a, t_element **stack_b)
 {
     int         i;
     t_element   *head;
@@ -26,7 +26,7 @@ void    push_to_b(t_element **stack_a, t_element **stack_b, int div)
             do__pb(stack_a, stack_b);
             i++;
         }
-        else if (head->index <= i + div)
+        else if (head->index <= i + 34)
         {
             do__pb(stack_a, stack_b);
             do__rb(stack_b);
@@ -64,12 +64,6 @@ void    push_b_to_a(t_element **stack_a, t_element **stack_b)
 
 void    sort_big_algo(t_element **stack_a, t_element **stack_b)
 {
-    int div;
-
-    if (lst_size(*stack_a) >= 500)
-        div = 34;
-    if(lst_size(*stack_a) < 500)
-        div = 16;   
-    push_to_b(stack_a, stack_b, div);
+    push_to_b(stack_a, stack_b);
     push_b_to_a(stack_a, stack_b);
 }

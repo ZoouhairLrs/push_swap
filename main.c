@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 21:50:08 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/15 23:45:01 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 		return (0);
 	}
 	sort(&stack_a, &stack_b);
-	print_stacks(stack_a, stack_b);
+	// print_stacks(stack_a, stack_b);
 	// free(stack_a);
 	// free(stack_b);
 }

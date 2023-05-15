@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 04:28:26 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/14 20:07:56 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/15 23:44:51 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void    push_to_a(t_element **stack_a, t_element **stack_b, t_element *big_node)
 {
     while (big_node->pos != 0)
     {
-        if (big_node->pos > 0)
+        if (big_node->pos >= 0)
         {
             do__rb(stack_b);
             big_node->pos--;
