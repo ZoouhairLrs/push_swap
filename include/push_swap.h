@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/14 21:32:43 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/15 16:02:22 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	do__rrb(t_element **stack_b);
 void	do__rrr(t_element **stack_a, t_element **stack_b);
 
 //big algo;
-void    push_to_b(t_element **stack_a, t_element **stack_b, int i);
+void    push_to_b(t_element **stack_a, t_element **stack_b, int div);
 void    sort_big_algo(t_element **stack_a, t_element **stack_b);
 void    push_b_to_a(t_element **stack_a, t_element **stack_b);
 t_element   *big_node_of_stack(t_element **stack_b);

@@ -6,28 +6,30 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 16:49:26 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/14 23:24:34 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/15 16:15:50 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void    push_to_b(t_element **stack_a, t_element **stack_b, int i)
+void    push_to_b(t_element **stack_a, t_element **stack_b, int div)
 {
+    int         i;
     t_element   *head;
 
+    i = 0;
     while (*stack_a)
     {
         head = *stack_a;
-        if (head->index <= i)
+        if (head->index < i)
         {
             do__pb(stack_a, stack_b);
             i++;
         }
-        else if (head->index < i + 16)
+        else if (head->index <= i + div)
         {
             do__pb(stack_a, stack_b);
-            do__ra(stack_a);
+            do__rb(stack_b);
             i++;
         }
         else
@@ -62,9 +64,12 @@ void    push_b_to_a(t_element **stack_a, t_element **stack_b)
 
 void    sort_big_algo(t_element **stack_a, t_element **stack_b)
 {
-    int i;
+    int div;
 
-    i = 0;
-    push_to_b(stack_a, stack_b, i);
+    if (lst_size(*stack_a) >= 500)
+        div = 34;
+    if(lst_size(*stack_a) < 500)
+        div = 16;   
+    push_to_b(stack_a, stack_b, div);
     push_b_to_a(stack_a, stack_b);
 }
