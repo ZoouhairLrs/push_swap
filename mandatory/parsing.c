@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/16 15:36:39 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/16 20:56:24 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,18 +67,6 @@ void	create_new_element(char *strs, t_element **stack_a)
 	}
 	tmp = ft_atol(strs);
 	*stack_a = new_element(tmp, *stack_a);
-}
-
-int	my_strlen(char **argv)
-{
-	int	l;
-
-	if (!argv)
-		return (0);
-	l = 0;
-	while (argv[l])
-		l++;
-	return (l);
 }
 
 int	check_space(char *argv)

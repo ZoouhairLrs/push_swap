@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/16 15:38:17 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/16 20:55:54 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,18 @@ int	is_sorted(t_element **stack_a)
 	return (1);
 }
 
+int	my_strlen(char **argv)
+{
+	int	l;
+
+	if (!argv)
+		return (0);
+	l = 0;
+	while (argv[l])
+		l++;
+	return (l);
+}
+
 int	main(int argc, char **argv)
 {
 	t_element	*stack_a;
@@ -38,14 +50,7 @@ int	main(int argc, char **argv)
 	parsing(&stack_a, argv, argc);
 	if (is_sorted(&stack_a))
 	{
-		//don't miss free stacks.
-		free_stack(&stack_a);
-		free_stack(&stack_b);
 		return (0);
 	}
 	sort(&stack_a, &stack_b);
-	print_stacks(stack_a, stack_b);
-	free_stack(&stack_a);
-	free_stack(&stack_b);
-	while (1){}
 }

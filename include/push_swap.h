@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/16 15:37:18 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/16 21:08:10 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ typedef struct s_element {
 	int		value;
 	int		index;
 	int		pos;
-	struct s_element *next;
-}	t_element;
+	struct s_element	*next;
+}t_element;
 
 typedef struct s_list {
 	int			*tab;
@@ -42,6 +42,7 @@ void		sort(t_element **stack_a, t_element **stack_b);
 int			ft_strcmp(char *a, char *b);
 t_element	*new_element(int tmp, t_element *stack_a);
 int			is_sorted(t_element **stack_a);
+int			my_strlen(char **argv);
 
 //header sorting
 size_t		element_size(t_element *lst);
@@ -82,9 +83,10 @@ void	do__rrr(t_element **stack_a, t_element **stack_b);
 void		push_to_b(t_element **stack_a, t_element **stack_b);
 void		sort_big_algo(t_element **stack_a, t_element **stack_b);
 void		push_b_to_a(t_element **stack_a, t_element **stack_b);
-t_element   *big_node_of_stack(t_element **stack_b);
+t_element	*big_node_of_stack(t_element **stack_b);
 int			pos_node(t_element **stack_b, t_element *big_small_node);
-void		push_to_a(t_element **stack_a, t_element **stack_b, t_element *big_node);
+void		push_to_a(t_element **stack_a, t_element **stack_b,
+				t_element *big_node);
 t_element	*get_stack_bottom(t_element *stack);
 t_element	*get_stack_before_bottom(t_element *stack);
 

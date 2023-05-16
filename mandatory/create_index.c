@@ -6,11 +6,34 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 17:05:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/16 15:19:11 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/16 21:02:30 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void	swap_stack_clone(t_element *stack_a, t_list *list, int temp)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < lst_size(stack_a) - 1)
+	{
+		j = 0;
+		while (j < lst_size(stack_a) - i - 1)
+		{
+			if (list->tab[j] > list->tab[j + 1])
+			{
+				temp = list->tab[j];
+				list->tab[j] = list->tab[j + 1];
+				list->tab[j + 1] = temp;
+			}
+			j++;
+		}
+		i++;
+	}
+}
 
 void	*sorting_stack_clone(t_element *stack_a, t_list *list)
 {
@@ -30,22 +53,7 @@ void	*sorting_stack_clone(t_element *stack_a, t_list *list)
 		head = head->next;
 		i++;
 	}
-	i = 0;
-	while (i < lst_size(stack_a) - 1)
-	{
-		j = 0;
-		while (j < lst_size(stack_a) - i - 1)
-		{
-			if (list->tab[j] > list->tab[j + 1])
-			{
-				temp = list->tab[j];
-				list->tab[j] = list->tab[j + 1];
-				list->tab[j + 1] = temp;
-			}
-			j++;
-		}
-		i++;
-	}
+	swap_stack_clone(stack_a, list, temp);
 	return (list);
 }
 
