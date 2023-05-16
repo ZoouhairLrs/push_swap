@@ -10,6 +10,8 @@
         "unordered_map": "c",
         "vector": "c",
         "chrono": "c",
-        "variant": "c"
+        "variant": "c",
+        "push_swap.h": "c",
+        "libft.h": "c"
     }
 }
