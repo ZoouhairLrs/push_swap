@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/16 14:23:47 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:36:39 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ void	check_data(t_element *stack_a)
 {
 	t_element	*tmp;
 	t_element	*tmp1;
-	int	count;
+	int			count;
 
 	tmp = stack_a;
-	while(tmp)
+	while (tmp)
 	{
 		count = 0;
 		tmp1 = tmp;
-		while(tmp1)
+		while (tmp1)
 		{
-			if(tmp1->value == tmp->value)
+			if (tmp1->value == tmp->value)
 			{
 				count++;
-				if(count >= 2)
+				if (count >= 2)
 					exit_error();
 			}
 			tmp1 = tmp1->next;
@@ -52,22 +52,20 @@ t_element	*new_element(int tmp, t_element *stack_a)
 void	create_new_element(char *strs, t_element **stack_a)
 {
 	long	tmp;
-	int i;
+	int		i;
 
 	i = 0;
-	if(!strs || !strs[0])
+	if (!strs || !strs[0])
 		exit_error();
-	while(strs[i])
+	while (strs[i])
 	{
 		if ((strs[i] == '+' || strs[i] == '-') && i == 0)
 			i++;
-		if(!ft_isdigit(strs[i]))
+		if (!ft_isdigit(strs[i]))
 			exit_error();
 		i++;
 	}
 	tmp = ft_atol(strs);
-	// if(tmp == 0)
-	// 	exit_error();
 	*stack_a = new_element(tmp, *stack_a);
 }
 
@@ -88,31 +86,31 @@ int	check_space(char *argv)
 	int	i;
 
 	i = 0;
-	while(argv[i])
+	while (argv[i])
 	{
-		if(argv[i] == ' ')
-			return(1);
+		if (argv[i] == ' ')
+			return (1);
 		i++;
 	}
 	return (0);
 }
 
-void parsing (t_element **stack_a, char **argv, int argc)
+void	parsing(t_element **stack_a, char **argv, int argc)
 {
 	int		len_strs;
 	int		index;
 	char	**strs;
 
 	index = argc - 1;
-	while(index > 0)
+	while (index > 0)
 	{
-		if(check_space(argv[index]))
+		if (check_space(argv[index]))
 		{
 			strs = ft_split(argv[index], ' ');
 			len_strs = my_strlen(strs) - 1;
-			if(len_strs == -1)
+			if (len_strs == -1)
 				exit_error();
-			while(len_strs >= 0)
+			while (len_strs >= 0)
 			{
 				create_new_element(strs[len_strs], stack_a);
 				len_strs--;

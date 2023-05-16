@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 13:11:41 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 16:13:51 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:08:56 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	swap(t_element **stack)
 {
-	int	t;
-	t_element *next_node;
+	int			t;
+	t_element	*next_node;
 
 	if (element_size(*stack) < 2)
 		return ;
 	next_node = (*stack)->next;
 	t = (*stack)->value;
-	(*stack)->value = next_node->value;//(*stack)->next->value;
+	(*stack)->value = next_node->value;
 	next_node->value = t;
-	// (*stack)->next->value = t;
 }
 
 void	do__sa(t_element **stack_a)

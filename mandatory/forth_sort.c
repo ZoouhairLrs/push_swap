@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 00:13:33 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/14 21:21:38 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:09:48 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	find_in_stack(t_element *stack_a, int number)
 {
-	int		i;
+	int			i;
 	t_element	*head;
 
 	i = 0;
@@ -27,7 +27,7 @@ int	find_in_stack(t_element *stack_a, int number)
 	return (i);
 }
 
-void    sort_forth(t_element **stack_a, t_element **stack_b)
+void	sort_forth(t_element **stack_a, t_element **stack_b)
 {
 	t_element	*min;
 

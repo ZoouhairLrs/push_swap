@@ -6,13 +6,12 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:04:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/15 23:46:50 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:37:18 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
 
 # include <stdlib.h>
 # include <stdio.h>
@@ -22,18 +21,18 @@
 # include "../libft/libft.h"
 
 typedef struct s_element {
-	int	value;
-	int index;
-	int	pos;
-	struct	s_element *next;
+	int		value;
+	int		index;
+	int		pos;
+	struct s_element *next;
 }	t_element;
 
 typedef struct s_list {
-	int	*tab;
-	int len_stack;
-	t_element *stack_a;
-	t_element *stack_b;
-} t_list;
+	int			*tab;
+	int			len_stack;
+	t_element	*stack_a;
+	t_element	*stack_b;
+}	t_list;
 
 //header parsing
 void		parsing(t_element **a, char **argv, int argc);
@@ -46,15 +45,14 @@ int			is_sorted(t_element **stack_a);
 
 //header sorting
 size_t		element_size(t_element *lst);
-void 	*sorting_stack_clone(t_element *stack_a, t_list *tab);
-void    	create_index(t_element *stack_a);
-void	sort_three(t_element **stack_a);
+void		*sorting_stack_clone(t_element *stack_a, t_list *tab);
+void		create_index(t_element *stack_a);
+void		sort_three(t_element **stack_a);
 t_element	*find_min(t_element *stack_a);
 t_element	*find_max(t_element *stack_a);
-void    sort_forth(t_element **stack_a, t_element **stack_b);
-int	find_in_stack(t_element *stack_a, int number);
-void    sort_five(t_element **stack_a, t_element **stack_b);
-
+void		sort_forth(t_element **stack_a, t_element **stack_b);
+int			find_in_stack(t_element *stack_a, int number);
+void		sort_five(t_element **stack_a, t_element **stack_b);
 
 //header utils
 void	free_stack(t_element **stack);
@@ -81,12 +79,12 @@ void	do__rrb(t_element **stack_b);
 void	do__rrr(t_element **stack_a, t_element **stack_b);
 
 //big algo;
-void    push_to_b(t_element **stack_a, t_element **stack_b);
-void    sort_big_algo(t_element **stack_a, t_element **stack_b);
-void    push_b_to_a(t_element **stack_a, t_element **stack_b);
+void		push_to_b(t_element **stack_a, t_element **stack_b);
+void		sort_big_algo(t_element **stack_a, t_element **stack_b);
+void		push_b_to_a(t_element **stack_a, t_element **stack_b);
 t_element   *big_node_of_stack(t_element **stack_b);
-int		pos_node(t_element **stack_b, t_element *big_small_node);
-void    push_to_a(t_element **stack_a, t_element **stack_b, t_element *big_node);
+int			pos_node(t_element **stack_b, t_element *big_small_node);
+void		push_to_a(t_element **stack_a, t_element **stack_b, t_element *big_node);
 t_element	*get_stack_bottom(t_element *stack);
 t_element	*get_stack_before_bottom(t_element *stack);
 

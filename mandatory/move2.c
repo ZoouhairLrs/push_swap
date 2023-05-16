@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 13:14:41 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/13 16:13:58 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/16 15:05:48 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 void	push(t_element **stack_a, t_element **stack_b)
 {
 	t_element	*tmp;
-	// t_element	*element;
 
 	if (!*stack_a)
 		return ;
 	tmp = (*stack_a)->next;
-	// tmp = *stack_a;
 	(*stack_a)->next = *stack_b;
 	*stack_b = *stack_a;
 	*stack_a = tmp;
