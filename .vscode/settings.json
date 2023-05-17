@@ -12,6 +12,7 @@
         "chrono": "c",
         "variant": "c",
         "push_swap.h": "c",
-        "libft.h": "c"
+        "libft.h": "c",
+        "push_swap_bonus.h": "c"
     }
 }

@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:00:16 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/16 15:09:16 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 16:16:43 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../include/push_swap_bonus.h"
 
 int	ft_strcmp(char *a, char *b)
 {

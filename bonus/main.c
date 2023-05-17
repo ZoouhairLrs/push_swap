@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/17 13:36:23 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 16:16:47 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../include/push_swap_bonus.h"
 
 int	is_sorted(t_element **stack_a)
 {

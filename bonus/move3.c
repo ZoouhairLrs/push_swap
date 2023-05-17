@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 13:17:04 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/15 15:13:51 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 16:17:05 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../include/push_swap_bonus.h"
 
 void	rotate(t_element **stack)
 {

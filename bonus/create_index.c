@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 17:05:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/16 22:24:54 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 16:18:25 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../include/push_swap_bonus.h"
 
 void	swap_stack_clone(t_element *stack_a, t_var_list *list, int temp)
 {

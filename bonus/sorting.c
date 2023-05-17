@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:29:08 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/16 14:54:07 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 16:17:21 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../include/push_swap_bonus.h"
 
 size_t	element_size(t_element *stack)
 {

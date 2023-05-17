@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 00:04:56 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/14 21:20:33 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 16:16:51 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../include/push_swap_bonus.h"
 
 t_element	*find_min(t_element *stack_a)
 {

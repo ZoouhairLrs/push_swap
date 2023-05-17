@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:38:02 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/16 15:11:49 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 16:16:31 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../include/push_swap_bonus.h"
 
 void	exit_error(void)
 {
