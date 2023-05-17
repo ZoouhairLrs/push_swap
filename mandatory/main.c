@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/16 20:55:54 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 13:41:51 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
 int	is_sorted(t_element **stack_a)
 {
@@ -53,4 +53,5 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	sort(&stack_a, &stack_b);
+	while(1){}
 }

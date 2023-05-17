@@ -6,11 +6,11 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:42:44 by zlaarous          #+#    #+#              #
-#    Updated: 2023/05/16 21:34:06 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/05/17 13:37:11 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= 	main.c \
+SRCS		= 	./mandatory/main.c \
 					./mandatory/parsing.c \
 					./mandatory/exit_error.c \
 					./printf_stack.c \
