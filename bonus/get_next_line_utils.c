@@ -6,11 +6,11 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 10:11:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/03/18 16:30:07 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 22:22:32 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../include/push_swap_bonus.h"
 
 char	*gnl_strchr(const char *str, char c)
 {
