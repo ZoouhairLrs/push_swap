@@ -40,27 +40,27 @@ int	my_strlen(char **argv)
 
 void	checking_moves(t_element **stack_a, t_element **stack_b, char *line)
 {
-	if (!ft_strcmp(line, "pb\n"))
-		do__pb(stack_a, stack_b);
-	else if (!ft_strcmp(line, "pa\n"))
+	if (!ft_strcmp(line, "pa"))
 		do__pa(stack_a, stack_b);
-	else if (!ft_strcmp(line, "sa\n"))
+	else if (!ft_strcmp(line, "pb"))
+		do__pb(stack_a, stack_b);
+	else if (!ft_strcmp(line, "sa"))
 		do__sa(stack_a);
-	else if (!ft_strcmp(line, "sb\n"))
+	else if (!ft_strcmp(line, "sb"))
 		do__sb(stack_b);
-	else if (!ft_strcmp(line, "ss\n"))
+	else if (!ft_strcmp(line, "ss"))
 		do__ss(stack_a, stack_b);
-	else if (!ft_strcmp(line, "ra\n"))
-		do__ra(stack_a);
-	else if (!ft_strcmp(line, "rb\n"))
+	else if (!ft_strcmp(line, "rb"))
 		do__rb(stack_b);
-	else if (!ft_strcmp(line, "rr\n"))
+	else if (!ft_strcmp(line, "ra"))
+		do__ra(stack_a);
+	else if (!ft_strcmp(line, "rr"))
 		do__rr(stack_a, stack_b);
-	else if (!ft_strcmp(line, "rra\n"))
-		do__rra(stack_a);
-	else if (!ft_strcmp(line, "rrb\n"))
+	else if (!ft_strcmp(line, "rrb"))
 		do__rrb(stack_b);
-	else if (!ft_strcmp(line, "rrr\n"))
+	else if (!ft_strcmp(line, "rra"))
+		do__rrb(stack_a);
+	else if (!ft_strcmp(line, "rrr"))
 		do__rrr(stack_a, stack_b);
 	else
 		exit_error();
@@ -83,5 +83,8 @@ int	main(int argc, char **argv)
 	}
 	line = get_next_line(0);
 	while (!line)
+	{
+		ch
+	}
 	// sort(&stack_a, &stack_b);
 }

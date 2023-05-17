@@ -105,4 +105,7 @@ size_t	gnl_strlcat(char *dst, char *src, size_t size);
 char	*gnl_substr(char *s, unsigned int start, size_t len);
 char	*gnl_strjoin(char *s1, char *s2);
 
+//checker
+void	checking_moves(t_element **stack_a, t_element **stack_b, char *line);
+
 #endif
