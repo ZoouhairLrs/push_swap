@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 10:11:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/17 22:22:32 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 22:58:41 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*gnl_sub_line(char *str)
 	i = 0;
 	if (!str)
 		return (NULL);
-	len = (gnl_strchr(str, '\n') - str) + 1;
+	len = (gnl_strchr(str, '\n') - str) + 1 + i;
 	i = 0;
 	str_save = gnl_substr(str, 0, len);
 	return (str_save);

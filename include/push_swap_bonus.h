@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:06:49 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/17 22:22:57 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/17 22:56:18 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ typedef struct s_var_list
 	t_element			*stack_a;
 	t_element			*stack_b;
 }						t_var_list;
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 
 //header parsing
 void					parsing(t_element **a, char **argv, int argc);
@@ -95,15 +99,15 @@ t_element				*get_stack_bottom(t_element *stack);
 t_element				*get_stack_before_bottom(t_element *stack);
 
 //get_next_line
-char	*get_next_line(int fd);
-char	*gnl_read_str(int fd, char *save);
-char	*gnl_strchr(const char *str, char c);
-size_t	gnl_strlen(char *str);
-char	*gnl_sub_line(char *str);
-size_t	gnl_strlcpy(char *dst, char *src, size_t dstsize);
-size_t	gnl_strlcat(char *dst, char *src, size_t size);
-char	*gnl_substr(char *s, unsigned int start, size_t len);
-char	*gnl_strjoin(char *s1, char *s2);
+char					*get_next_line(int fd);
+char					*gnl_read_str(int fd, char *save);
+char					*gnl_strchr(const char *str, char c);
+size_t					gnl_strlen(char *str);
+char					*gnl_sub_line(char *str);
+size_t					gnl_strlcpy(char *dst, char *src, size_t dstsize);
+size_t					gnl_strlcat(char *dst, char *src, size_t size);
+char					*gnl_substr(char *s, unsigned int start, size_t len);
+char					*gnl_strjoin(char *s1, char *s2);
 
 //checker
 void	checking_moves(t_element **stack_a, t_element **stack_b, char *line);

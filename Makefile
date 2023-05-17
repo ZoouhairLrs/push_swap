@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:42:44 by zlaarous          #+#    #+#              #
-#    Updated: 2023/05/17 22:13:54 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/05/18 00:17:38 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRCS		= 	./mandatory/main.c \
 					./mandatory/tools_big_algo.c \
 					./mandatory/ft_strcmp.c \
 
-SRCS_BONUS	=	./bonus/main.c \
+SRCS_BONUS	=	./bonus/main_checker.c \
 					./bonus/parsing.c \
 					./bonus/exit_error.c \
 					./bonus/create_index.c \
@@ -50,6 +50,8 @@ SRCS_BONUS	=	./bonus/main.c \
 					./bonus/utils.c \
 					./bonus/tools_big_algo.c \
 					./bonus/ft_strcmp.c \
+					./bonus/get_next_line.c \
+					./bonus/get_next_line_utils.c \
 
 OBJES = $(SRCS:.c=.o)
 OBJES_BONUS = $(SRCS_BONUS:.c=.o)
@@ -89,7 +91,8 @@ clean		:
 				@echo "\033[0;93m object files removed.\033[0m"
 
 fclean		:	clean
-				$(RM) $(NAME) $(CHECKER)
+				$(RM) $(NAME) $(CHECKER) libft/libft.a
+				$(RM) libft/*.o
 				clear
 				@echo "\033[0;93mthe object files and the exicutable are removed.\033[0m"
 
