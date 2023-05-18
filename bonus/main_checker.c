@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_checker.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/18 00:09:10 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/18 16:20:44 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,8 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("ok", 1);
 	else
 		ft_putstr_fd("ko", 1);
+	free(stack_a);
+	free(stack_b);
 	return (0);
 	// sort(&stack_a, &stack_b);
 }

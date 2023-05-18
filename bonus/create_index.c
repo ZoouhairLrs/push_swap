@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 17:05:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/17 16:18:25 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:05:33 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,6 @@ void	create_index(t_element *stack_a)
 		}
 			head = head->next;
 	}
+	free(list->tab);
+	free(list);
 }
