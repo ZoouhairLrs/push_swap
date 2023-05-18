@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/18 17:07:13 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:08:52 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,10 @@ int	main(int argc, char **argv)
 
 	stack_b = NULL;
 	stack_a = NULL;
-	while (1)
-	{}
-		if (argc == 1)
-			return (0);
-		parsing(&stack_a, argv, argc);
-		if (is_sorted(&stack_a))
-			return (0);
-		sort(&stack_a, &stack_b);
+	if (argc == 1)
+		return (0);
+	parsing(&stack_a, argv, argc);
+	if (is_sorted(&stack_a))
+		return (0);
+	sort(&stack_a, &stack_b);
 }
