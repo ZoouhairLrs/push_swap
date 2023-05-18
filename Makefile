@@ -6,7 +6,7 @@
 #    By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/10 12:42:44 by zlaarous          #+#    #+#              #
-#    Updated: 2023/05/18 00:17:38 by zlaarous         ###   ########.fr        #
+#    Updated: 2023/05/18 21:41:54 by zlaarous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ OBJES_BONUS = $(SRCS_BONUS:.c=.o)
 NAME 		= push_swap
 CHECKER		= checker
 CC 			= cc
-CFLAGS 		= -Wall -Wextra -Werror	
+CFLAGS 		= #-Wall -Wextra -Werror	
 RM 			= rm -rf
 
 %.o			:	%.c push_swap.h

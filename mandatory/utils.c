@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 21:58:15 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/17 13:47:11 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/18 21:47:06 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	free_stack(t_element **stack)
 		head = head->next;
 		free(tmp);
 	}
-	free(stack);
 }
 
 int	lst_size(t_element *head)

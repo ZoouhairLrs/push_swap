@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:29:08 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/17 16:17:21 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/18 21:39:52 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ size_t	element_size(t_element *stack)
 
 void	sort(t_element **stack_a, t_element **stack_b)
 {
-	if (lst_size(*stack_a) == 2)
-		do__sa(stack_a);
-	if (lst_size(*stack_a) == 3)
-		sort_three(stack_a);
-	if (lst_size(*stack_a) == 4)
-		sort_forth(stack_a, stack_b);
+	// if (lst_size(*stack_a) == 2)
+	// 	do__sa(stack_a);
+	// if (lst_size(*stack_a) == 3)
+	// 	sort_three(stack_a);
+	// if (lst_size(*stack_a) == 4)
+	// 	sort_forth(stack_a, stack_b);
 	if (lst_size(*stack_a) == 5)
 		sort_five(stack_a, stack_b);
-	if (lst_size(*stack_a) > 5)
-		sort_big_algo(stack_a, stack_b);
+	// if (lst_size(*stack_a) > 5)
+	// 	sort_big_algo(stack_a, stack_b);
 }
