@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:06:49 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/17 22:56:18 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:34:46 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,7 @@ char					*gnl_substr(char *s, unsigned int start, size_t len);
 char					*gnl_strjoin(char *s1, char *s2);
 
 //checker
-void	checking_moves(t_element **stack_a, t_element **stack_b, char *line);
+void					checking_moves(t_element **stack_a,
+							t_element **stack_b, char *line);
 
 #endif

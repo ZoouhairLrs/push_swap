@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/18 16:20:44 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/18 17:54:33 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,6 @@ void	checking_moves(t_element **stack_a, t_element **stack_b, char *line)
 		do__rra(stack_a);
 	else if (ft_strcmp(line, "rrr\n"))
 		do__rrr(stack_a, stack_b);
-	else if (ft_strcmp(line, "\n"))
-		return ;
 	else
 		exit_error();
 }
@@ -93,8 +91,5 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("ok", 1);
 	else
 		ft_putstr_fd("ko", 1);
-	free(stack_a);
-	free(stack_b);
 	return (0);
-	// sort(&stack_a, &stack_b);
 }
