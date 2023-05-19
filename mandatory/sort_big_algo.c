@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 16:49:26 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/18 22:20:31 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/19 04:12:49 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ void	push_to_b(t_element **stack_a, t_element **stack_b)
 {
 	int			i;
 	t_element	*head;
-	t_element	*tmp;
 
 	i = 0;
-	tmp = *stack_a;
 	while (*stack_a)
 	{
 		head = *stack_a;
@@ -37,7 +35,6 @@ void	push_to_b(t_element **stack_a, t_element **stack_b)
 		else
 			do__ra(stack_a);
 	}
-	free_stack(&tmp);
 }
 
 void	push_b_to_a(t_element **stack_a, t_element **stack_b)
