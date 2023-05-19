@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 12:03:53 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/19 03:56:01 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/19 05:19:08 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,4 @@ int	main(int argc, char **argv)
 		return (0);
 	sort(&stack_a, &stack_b);
 	free_stack(&stack_a);
-	system("leaks push_swap");
 }

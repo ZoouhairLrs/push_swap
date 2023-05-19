@@ -6,7 +6,7 @@
 /*   By: zlaarous <zlaarous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:12:23 by zlaarous          #+#    #+#             */
-/*   Updated: 2023/05/19 04:14:10 by zlaarous         ###   ########.fr       */
+/*   Updated: 2023/05/19 05:17:57 by zlaarous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,10 +101,8 @@ void	parsing(t_element **stack_a, char **argv, int argc)
 			while (len_strs >= 0)
 			{
 				create_new_element(strs[len_strs], stack_a);
-				free(strs[len_strs]);
 				len_strs--;
 			}
-			free(strs);
 		}
 		else
 			create_new_element(argv[index], stack_a);
